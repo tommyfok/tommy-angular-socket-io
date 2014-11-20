@@ -12,7 +12,8 @@
 
 ## Usage
 1. Add `tomSocket` as your module dependency
-2. Inject `tomSocket` as a service and use it like this, just like original socket.io:
+2. modify `tomSocket.service.js`, set `pathToServer` to your __real server url__ in line 15
+3. Inject `tomSocket` as a service and use it like this, just like original socket.io:
 ```javascript
   tomSocket.on('eventName', function (data) {
     // do something with data
