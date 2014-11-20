@@ -7,7 +7,7 @@
 - auto apply event callbacks
 
 ## Install
-1. `bower install -S tommy-angular-socket-io`
+1. `bower install -S tommy-angular-socket-io` or download `tomSocket.service.js` manually
 2. Insert `<script src="/path/to/your/tomSocket.service.js"></script>` after angular.js
 
 ## Usage
