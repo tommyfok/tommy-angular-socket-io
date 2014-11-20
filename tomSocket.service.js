@@ -11,6 +11,8 @@ angular.module('tomSocket', [])
         onEvents         = {},
         ioTryCount       = 0,
         scriptTryCount   = 0,
+        // pathToServer is the only variable that needs to be configured
+        pathToServer     = 'path/to/server',
         script;
 
     function injectSocketIo () {
@@ -55,7 +57,7 @@ angular.module('tomSocket', [])
     }
 
     getIo(function (io) {
-      var socket = io('path/to/socket/server');
+      var socket = io(pathToServer);
       self.on = function (event, callback) {
         socket.on(event, function (data) {
           $rootScope.$apply(function () {
