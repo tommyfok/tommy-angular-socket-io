@@ -1,14 +1,18 @@
 {
   "name": "angular-socket",
   "version": "0.0.1",
-  "homepage": "https://github.com/tommyfok/angular-socket",
+  "homepage": "https://github.com/tommyfok/tommy-angular-socket-io",
   "authors": [
-    "霍崇波 <154274174@qq.com>"
+    "tommyfok <154274174@qq.com>"
   ],
   "description": "angular socket.io plugin, with mini configuration and api",
   "main": "tomSocket.service.js",
   "keywords": [
-    "angular"
+    "angular",
+    "angularjs",
+    "socket",
+    "socket.io",
+    "socketio"
   ],
   "license": "MIT",
   "ignore": [
