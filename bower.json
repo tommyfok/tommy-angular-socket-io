@@ -1,0 +1,21 @@
+{
+  "name": "angular-socket",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tommyfok/angular-socket",
+  "authors": [
+    "霍崇波 <154274174@qq.com>"
+  ],
+  "description": "angular socket.io plugin, with mini configuration and api",
+  "main": "tomSocket.service.js",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
