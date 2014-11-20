@@ -15,8 +15,8 @@
 2. config your module with `SocketProvider.pathToServer = 'path/to/your/real/socket/server'`
 3. Inject `Socket` as a service and use it like this, just like original socket.io:
 ```javascript
-  tomSocket.on('eventName', function (data) {
+  Socket.on('eventName', function (data) {
     // do something with data
   });
-  tomSocket.emit('eventName', data);
+  Socket.emit('eventName', data);
 ```
