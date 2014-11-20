@@ -1,18 +1,16 @@
 angular.module('tomSocket', [])
 
-.factory('tomSocket', function ($rootScope) {
+.provider('Socket', function () {
   // factory method will return the same object to all injectors
   // while service/provider mode will return an entirly `new` object
-  // provider method is configurable
-  // we need to use factory mode here to make sure io.connect is called only once
-  function newIo () {
+  // provider method is configurable, so we need to use provider mode here
+  var Obj = this;
+  Obj.$get = ['$rootScope', function ($rootScope) {
     var self             = this,
         isFetchingScript = false,
         onEvents         = {},
         ioTryCount       = 0,
         scriptTryCount   = 0,
-        // pathToServer is the only variable that needs to be configured
-        pathToServer     = 'path/to/server',
         script;
 
     function injectSocketIo () {
@@ -57,7 +55,7 @@ angular.module('tomSocket', [])
     }
 
     getIo(function (io) {
-      var socket = io(pathToServer);
+      var socket = io(Obj.pathToServer);
       self.on = function (event, callback) {
         socket.on(event, function (data) {
           $rootScope.$apply(function () {
@@ -74,7 +72,7 @@ angular.module('tomSocket', [])
       });
       onEvents = {};
     });
-  }
 
-  return new newIo;
+    return self;
+  }];
 });
