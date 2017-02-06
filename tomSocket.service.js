@@ -15,7 +15,7 @@ angular.module('tomSocket', [])
 
     function injectSocketIo () {
       script = document.createElement('script');
-      script.src = 'https://cdn.socket.io/socket.io-1.2.0.js';
+      script.src = '//cdn.socket.io/socket.io-1.4.5.js';
       script.setAttribute('scriptTryCount', scriptTryCount);
       script.style.display = 'none';
       document.body.appendChild(script);
